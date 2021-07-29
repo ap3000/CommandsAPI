@@ -5,7 +5,8 @@
     <UserSecretsId>bfbb8bbd-e8bc-4b54-ad52-1d9bc9184e8a</UserSecretsId>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup> 
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" /> 
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
