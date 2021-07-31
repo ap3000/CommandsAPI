@@ -12,7 +12,7 @@ namespace CommandAPI.Tests
         {
             testCommand = new Command
             {
-                Howto = "Do something aesome",
+                HowTo = "Do something aesome",
                 Platform = "Some platform",
                 CommandLine = "Some commandline"
             };
@@ -23,10 +23,10 @@ namespace CommandAPI.Tests
             // Arrange            
 
             // Act
-            testCommand.Howto = "Execute Unit Tests";
+            testCommand.HowTo = "Execute Unit Tests";
             
             // Assert
-            Assert.Equal("Execute Unit Tests", testCommand.Howto);
+            Assert.Equal("Execute Unit Tests", testCommand.HowTo);
         }
 
         [Fact]
