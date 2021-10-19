@@ -48,6 +48,7 @@ namespace CommandAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,CommandContext context)
         {
+            // Comment out after first upload to Azure
             context.Database.Migrate();
             
             if (env.IsDevelopment())
