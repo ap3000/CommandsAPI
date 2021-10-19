@@ -11,17 +11,35 @@ namespace CommandAPI.Migrations
                 name: "CommandItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Howto = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
-                    Platform = table.Column<string>(type: "text", nullable: false),
-                    CommandLine = table.Column<string>(type: "text", nullable: false)
+                    HowTo = table.Column<string>(maxLength: 250, nullable: false),
+                    Platform = table.Column<string>(nullable: false),
+                    CommandLine = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CommandItems", x => x.Id);
                 });
         }
+        
+        // protected override void Up(MigrationBuilder migrationBuilder)
+        // {
+        //     migrationBuilder.CreateTable(
+        //         name: "CommandItems",
+        //         columns: table => new
+        //         {
+        //             Id = table.Column<int>(type: "integer", nullable: false)
+        //                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+        //             Howto = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+        //             Platform = table.Column<string>(type: "text", nullable: false),
+        //             CommandLine = table.Column<string>(type: "text", nullable: false)
+        //         },
+        //         constraints: table =>
+        //         {
+        //             table.PrimaryKey("PK_CommandItems", x => x.Id);
+        //         });
+        // }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
