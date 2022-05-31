@@ -5,6 +5,7 @@ namespace CommandAPI.Migrations
 {
     public partial class AddCommandsToDB : Migration
     {
+        // Les Jackson code
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
